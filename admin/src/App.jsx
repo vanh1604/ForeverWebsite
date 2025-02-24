@@ -7,7 +7,8 @@ import Orders from "./pages/Orders";
 import { useEffect, useState } from "react";
 import { ToastContainer} from "react-toastify";
 import Login from './components/Login';
-export const backendUrl = "http://localhost:8000";
+
+export const backendUrl = import.meta.env.VITE_BACKEND_URL || "https://forever-backend-black-theta.vercel.app";
 function App() {
   const [token, setToken] = useState(
     localStorage.getItem("token") ? localStorage.getItem("token") : ""
