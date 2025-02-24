@@ -6,7 +6,7 @@ import List from "./pages/List";
 import Orders from "./pages/Orders";
 import { useEffect, useState } from "react";
 import { ToastContainer} from "react-toastify";
-import Login from "./components/login";
+import Login from './components/Login';
 export const backendUrl = "http://localhost:8000";
 function App() {
   const [token, setToken] = useState(
