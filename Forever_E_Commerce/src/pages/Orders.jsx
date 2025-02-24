@@ -77,7 +77,7 @@ const Orders = () => {
                   </span>
                 </p>
                 <p className="mt-2">
-                  Date:{" "}
+                  PaymentMethod:{" "}
                   <span className="text-gray-400">{item.paymentMethod}</span>
                 </p>
               </div>
