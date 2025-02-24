@@ -5,7 +5,7 @@ import Add from "./pages/Add";
 import List from "./pages/List";
 import Orders from "./pages/Orders";
 import { useEffect, useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer} from "react-toastify";
 import Login from "./components/login";
 export const backendUrl = "http://localhost:8000";
 function App() {
