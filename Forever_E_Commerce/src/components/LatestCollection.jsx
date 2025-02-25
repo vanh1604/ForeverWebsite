@@ -1,18 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "./Title";
 import ProductItem from "./ProductItem";
 
 const LatestCollection = () => {
   const { products } = useContext(ShopContext);
-  const [latestProducts, setLatestProducts] = useState([]);
-  
-  useEffect(() => {
-    setLatestProducts(products.slice(0, 10));
-    console.log(latestProducts);
-    
-  }, [products]);
-
+  const latestProducts = useMemo(() => products.slice(0, 10), [products]);
+  useEffect(() => {console.log(latestProducts);
+  }, [latestProducts]);
   return (
     <div className="my-10">
       <div className="text-center py-8 text-3xl">
@@ -28,7 +23,7 @@ const LatestCollection = () => {
         {latestProducts.map((item, index) => (
           <ProductItem
             key={index}
-            id={item.id}
+            _id={item._id}
             image={item.image}
             name={item.name}
             price={item.price}
